@@ -1,0 +1,22 @@
+version: '2'
+services:
+  nettools:
+    image: zoftdev/nettools:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile-nettools
+  k8stools:
+    image: zoftdev/k8stools:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile-k8stools
+  k8stools:
+    image: zoftdev/k8stools:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile-k8stools
+  kubelesstools:
+    image: zoftdev/kubelesstools:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile-kubelesstools

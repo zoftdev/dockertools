@@ -1,0 +1,5 @@
+FROM zoftdev/k8stools:latest
+RUN RELEASE=$(curl -s https://api.github.com/repos/kubeless/kubeless/releases/latest | grep tag_name | cut -d '"' -f 4) \
+&& curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_linux-amd64.zip && \
+  unzip kubeless_linux-amd64.zip && \
+  mv bundles/kubeless_linux-amd64/kubeless /usr/local/bin/
